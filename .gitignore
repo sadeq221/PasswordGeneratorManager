@@ -154,6 +154,3 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-
-# csv files inside csv directory
-csv/*
