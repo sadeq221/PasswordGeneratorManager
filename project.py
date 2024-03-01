@@ -3,7 +3,7 @@ from helpers import *
 def main():
 
     # Check if it's the first use of the App
-    if get_master_password() == "None":
+    if not get_master_password():
         intialize_accounts()
         set_master_password()
     else:

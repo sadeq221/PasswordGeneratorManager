@@ -21,12 +21,13 @@ else:
 
 # To get the master password from "master.csv" file
 def get_master_password():
-    with open(BASE_DIR / "csv/master.csv") as f:
-        reader = csv.reader(f)
-        for row in reader:
-            return row[1]
-        
-
+    try:
+        with open(BASE_DIR / "csv/master.csv") as f:
+            reader = csv.reader(f)
+            for row in reader:
+                return row[1]
+    except FileNotFoundError:
+        return False
 # Intialize the accounts database
 def intialize_accounts():
     with open(BASE_DIR / "csv/accounts.csv", "w", newline="") as file:
