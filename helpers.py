@@ -383,10 +383,10 @@ def change_account_password(account):
     print("-----------------------------------------\n")
 
     # Generate Random password and Add it to the account dictionary
-    account["password"] = generate()
+    new_password = generate()
 
     # Preview account Name and Password
-    print(f"New Password: {account['password']}\n")
+    print(f"New Password: {new_password}\n")
 
     # Listening for user input
     while True:
